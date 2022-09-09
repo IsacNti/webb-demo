@@ -1,3 +1,4 @@
+const { request, response } = require('express');
 const express = require('express');
 const pool = require('../utils/database');
 const router = express.Router();
@@ -22,5 +23,20 @@ router.get('/', async function(req, res, next) {
         next();
     }
 });
+
+router.get('/test', function(request, response) {
+    response.render('test.njk',{
+        title: 'Testsidans titel',
+        text: 'lite statisk text'
+    });
+});
+
+router.get('/images',function(request, response){
+    response.render('images.njk',{
+        title: 'Bilder',
+        text: 'fina bilder'
+    });
+});
+
 
 module.exports = router;
