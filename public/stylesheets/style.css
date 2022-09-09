@@ -151,13 +151,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0 var(--step-1);
 }
 
 h1 {
   font-size: var(--step-5);
 }
 
-.d-flex{
-  display: flex;
+footer {
+  background-color: #333;
+  width: 100%;
+  padding: 2rem;
+}
+
+nav {
+  background-color: greenyellow;
+  width: 100%;
+}
+
+main {
+  margin: 0 var(--step-1);
 }
